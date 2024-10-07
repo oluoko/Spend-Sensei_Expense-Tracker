@@ -30,7 +30,7 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
       }`}
     >
       <span className="w-1/2">{transaction.text}</span>
-      <span className="w-1/4">
+      <span className="w-1/4 item-amount">
         {sign} Ksh {addCommas(Math.abs(transaction.amount))}
       </span>
       <span className="w-1/4">

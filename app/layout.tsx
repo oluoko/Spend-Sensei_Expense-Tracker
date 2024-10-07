@@ -5,9 +5,9 @@ import "./globals.css";
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Spend Sensei: Expense Tracker",
+  title: "Spend Sensei",
   description:
-    "A financial dojo, where mastering your money moves is the ultimate goal.",
+    "An expense tracker. A financial dojo, where mastering your money moves is the ultimate goal.",
 };
 
 export default function RootLayout({

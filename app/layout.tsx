@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
-import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Spend Sensei",
-  description:
-    "An expense tracker. A financial dojo, where mastering your money moves is the ultimate goal.",
+  title: "Expense Tracker",
+  description: "Track your expenses and create a budget",
 };
 
 export default function RootLayout({
@@ -23,6 +24,7 @@ export default function RootLayout({
         <body className={roboto.className}>
           <Header />
           <main className="container">{children}</main>
+          <ToastContainer />
         </body>
       </html>
     </ClerkProvider>

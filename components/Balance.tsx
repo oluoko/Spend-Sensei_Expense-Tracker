@@ -3,10 +3,10 @@ import { addCommas, twoDP } from "@/lib/utils";
 
 const Balance = async () => {
   const { balance } = await getUserBalance();
-  
+
   // Ensure balance is passed through twoDP first, then add commas
   const formattedBalance = addCommas(twoDP(balance ?? 0));
-  
+
   return (
     <>
       <h4>Your Balance</h4>

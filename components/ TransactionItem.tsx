@@ -1,6 +1,8 @@
+"use client";
 import { Transaction } from "@/types/Transaction";
 import { addCommas, twoDP } from "@/lib/utils";
 import { toast } from "react-toastify";
+import deleteTransaction from "@/app/actions/deleteTransaction";
 
 const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
   const sign = transaction.amount < 0 ? "-" : "+";
@@ -10,13 +12,13 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
       "Are you sure you want to delete this transaction?"
     );
 
-    if (!confirmed) {
-      return;
-    }
+    if (!confirmed) return;
 
-    await deleteTransaction(transactionId);
+    const { message, error } = await deleteTransaction(transactionId);
 
-    toast.success("Transaction deleted successfully");
+    if (error) return toast.error(error);
+
+    toast.success(message);
   };
 
   return (
@@ -25,7 +27,12 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
       <span>
         {sign} Ksh {addCommas(twoDP(Math.abs(transaction.amount)))}
       </span>
-      <button onClick={() => handleDeleteTransaction(transaction.id)}>x</button>
+      <button
+        onClick={() => handleDeleteTransaction(transaction.id)}
+        className="delete-btn"
+      >
+        x
+      </button>
     </li>
   );
 };

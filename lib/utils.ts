@@ -8,9 +8,8 @@ export function formatDate(date: Date) {
   const month = date.toLocaleString("en-US", { month: "long" });
   const year = date.getFullYear();
 
-  // Determine the ordinal suffix (st, nd, rd, th)
   const getOrdinalSuffix = (day: number) => {
-    if (day > 3 && day < 21) return "th"; // catch exceptions like 11th, 12th, 13th
+    if (day > 3 && day < 21) return "th";
     switch (day % 10) {
       case 1:
         return "st";
@@ -25,5 +24,12 @@ export function formatDate(date: Date) {
 
   const dayWithSuffix = `${day}${getOrdinalSuffix(day)}`;
 
-  return `${dayOfWeek}, ${dayWithSuffix} ${month}, ${year}`;
+  // Add time in 24-hour format
+  const time = date.toLocaleString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false, // 24-hour format
+  });
+
+  return `${dayOfWeek}, ${dayWithSuffix} ${month}, ${year} at ${time}`;
 }

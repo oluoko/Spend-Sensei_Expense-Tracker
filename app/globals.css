@@ -224,3 +224,23 @@ input[type="number"] {
 .list li:hover .delete-btn {
   opacity: 1;
 }
+
+/* scrollbar*/
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #505760;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #9a5a4c;
+  border-radius: 15px;
+  border: 2px solid #505760;
+  max-height: 80px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #9e7959;
+}

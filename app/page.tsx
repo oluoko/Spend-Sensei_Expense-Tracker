@@ -27,7 +27,7 @@ const HomePage = async () => {
       <Balance />
       <IncomeExpense />
       <AddTransaction />
-      <TransactionList
+      <TransactionList />
     </main>
   );
 };

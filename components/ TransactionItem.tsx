@@ -24,11 +24,19 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
   };
 
   return (
-    <li className={transaction.amount < 0 ? "minus" : "plus"}>
-      {transaction.text}
-      <span>
+    <li
+      className={`flex justify-around w-full ${
+        transaction.amount < 0 ? "minus" : "plus"
+      }`}
+    >
+      <span className="w-1/2">{transaction.text}</span>
+      <span className="w-1/4">
         {sign} Ksh {addCommas(Math.abs(transaction.amount))}
       </span>
+      <span className="w-1/4">
+        {new Date(transaction.createdAt).toLocaleDateString()}
+      </span>
+
       <button
         onClick={() => handleDeleteTransaction(transaction.id)}
         className="delete-btn"

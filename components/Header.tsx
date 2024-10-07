@@ -12,7 +12,7 @@ const Header = async () => {
 
   return (
     <nav className="navbar h-20 bg-[#505760] ">
-      <div className="navbar-container h-full w-full md:w-4/5 ">
+      <div className="navbar-container h-full w-full md:w-4/5 my-4 ">
         <h2>Spend Sensei</h2>
         <div className="">
           <SignedOut>

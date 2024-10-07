@@ -10,7 +10,7 @@ const Balance = async () => {
   return (
     <>
       <h4>Your Balance</h4>
-      <h1 className="text-4xl font-bold">Ksh, {formattedBalance}</h1>
+      <h1 className="text-4xl font-bold">Ksh {formattedBalance}</h1>
     </>
   );
 };

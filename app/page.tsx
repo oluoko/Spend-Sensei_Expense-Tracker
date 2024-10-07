@@ -1,3 +1,4 @@
+import AddTransaction from "@/components/AddTransaction";
 import Guest from "@/components/Guest";
 import { currentUser } from "@clerk/nextjs/server";
 
@@ -19,7 +20,8 @@ const HomePage = async () => {
         , to Spend Sensei
       </h1>
 
-      <p className="text-lg font-semibold">Master your money moves!</p>
+      <p className="text-lg font-semibold mb-8">Master your money moves!</p>
+      <AddTransaction />
     </main>
   );
 };

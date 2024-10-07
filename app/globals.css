@@ -26,7 +26,6 @@ body {
 }
 
 .navbar {
-  background: #505760;
   color: #fff;
 }
 
@@ -34,14 +33,29 @@ body {
   color: #fff;
 }
 
-.navbar button,
+.navbar .sign-in-button button,
+.navbar .user-button button,
 .guest button {
   border: 0;
   border-radius: 5px;
-  background: rebeccapurple;
+  background: #9a5a4c;
   color: #fff;
   padding: 0.5rem 2rem;
   cursor: pointer;
+}
+
+.navbar .user-button button {
+  height: 66px;
+  width: 66px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .user-button button:hover,
+.navbar .sign-in-button button,
+.guest button {
+  box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 .navbar button:hover {
@@ -136,7 +150,7 @@ input[type="number"] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #505760;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;

@@ -30,7 +30,7 @@ const HomePage = async () => {
           <TransactionList />
         </div>
         <div className="w-full md:w-1/3  relative ">
-          <div className="relative md:fixed w-full md:w-1/3 md:top-[15%] border-black border-[0.4px] shadow-md bg-[#D9D0CC]  rounded-xl p-4 md:p-10">
+          <div className="relative md:fixed w-full md:w-1/3 md:top-[15%] shadow-xl rounded-2xl bg-gradient-to-br from-[#D9D0CC] via-[#9E7959] to-[#9A5A4C] p-4 md:p-10">
             <Balance />
             <IncomeExpense />
           </div>

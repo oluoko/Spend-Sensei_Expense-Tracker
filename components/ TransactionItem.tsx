@@ -1,6 +1,6 @@
 "use client";
 import { Transaction } from "@/types/Transaction";
-import { addCommas } from "@/lib/utils";
+import { addCommas, formatDate } from "@/lib/utils";
 import { toast } from "react-toastify";
 import deleteTransaction from "@/app/actions/deleteTransaction";
 
@@ -34,7 +34,7 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
         {sign} Ksh {addCommas(Math.abs(transaction.amount))}
       </span>
       <span className="w-1/4">
-        {new Date(transaction.createdAt).toLocaleDateString()}
+        <span>{formatDate(new Date(transaction.createdAt))}</span>
       </span>
 
       <button

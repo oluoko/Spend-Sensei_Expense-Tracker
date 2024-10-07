@@ -4,7 +4,7 @@ import "./globals.css";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
-export const meta: Metadata = {
+export const metadata: Metadata = {
   title: "Spend Sensei: Expense Tracker",
   description:
     "A financial dojo, where mastering your money moves is the ultimate goal.",

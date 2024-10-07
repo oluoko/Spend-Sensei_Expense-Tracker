@@ -11,8 +11,8 @@ const Header = async () => {
   const user = await checkUser();
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
+    <nav className="navbar h-20 ">
+      <div className="navbar-container h-full w-full md:w-4/5 ">
         <h2>Spend Sensei</h2>
         <div className="">
           <SignedOut>

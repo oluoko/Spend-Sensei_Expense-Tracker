@@ -23,7 +23,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={roboto.className}>
           <Header />
-          <main className="container">{children}</main>
+          <main className="container w-5/6 md:w-4/5 ">{children}</main>
           <ToastContainer />
         </body>
       </html>

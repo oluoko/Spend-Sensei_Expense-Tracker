@@ -19,7 +19,6 @@ body {
 
 .container {
   margin: 30px auto;
-  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +26,7 @@ body {
 }
 
 .navbar {
-  background: #000;
+  background: #505760;
   color: #fff;
 }
 
@@ -53,7 +52,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
   margin: 0 auto;
   padding: 0 2rem;
 }

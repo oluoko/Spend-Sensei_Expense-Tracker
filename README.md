@@ -2,6 +2,8 @@
 
 ### This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+### Spend Sensei is your financial dojo, where mastering your money moves is the ultimate goal. No more guessing where your cash went—our sleek, no-nonsense interface tracks every cent so you can focus on what matters: spending smarter, not harder. Whether you're trimming the fat from your budget or flexing your savings skills, Spend Sensei teaches you the art of mindful spending with precision and ease. Your wallet might thank you, but we’ll bow in appreciation. Welcome to the dojo—now, let’s balance those books like a pro.
+
 ## Getting Started
 
 First, run the development server:

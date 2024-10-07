@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Expense Tracker",
+  title: "Spend Sensei",
   description: "Track your expenses and create a budget",
 };
 

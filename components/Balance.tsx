@@ -8,7 +8,7 @@ const Balance = async () => {
     <>
       <h4>Your Balance</h4>
       <h1 className="text-4xl font-bold">
-        ${addCommas(Number(balance?.toFixed(2) ?? 0))}
+        Ksh {addCommas(Number(balance?.toFixed(2) ?? 0))}
       </h1>
     </>
   );

@@ -1,6 +1,6 @@
 "use client";
 import { Transaction } from "@/types/Transaction";
-import { addCommas, twoDP } from "@/lib/utils";
+import { addCommas } from "@/lib/utils";
 import { toast } from "react-toastify";
 import deleteTransaction from "@/app/actions/deleteTransaction";
 
@@ -16,16 +16,18 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
 
     const { message, error } = await deleteTransaction(transactionId);
 
-    if (error) return toast.error(error);
+    if (error) {
+      toast.error(error);
+    }
 
     toast.success(message);
   };
 
   return (
     <li className={transaction.amount < 0 ? "minus" : "plus"}>
-      {transaction.text}{" "}
+      {transaction.text}
       <span>
-        {sign} Ksh {addCommas(twoDP(Math.abs(transaction.amount)))}
+        {sign}${addCommas(Math.abs(transaction.amount))}
       </span>
       <button
         onClick={() => handleDeleteTransaction(transaction.id)}

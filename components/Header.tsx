@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <h2>Spend Sensi</h2>
+        <h2>Spend Sensei</h2>
         <div className="">
           <SignedOut>
             <SignInButton />

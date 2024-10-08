@@ -1,9 +1,13 @@
+// "use client";
+
 import AddTransaction from "@/components/AddTransaction";
 import Guest from "@/components/Guest";
 import { currentUser } from "@clerk/nextjs/server";
 import Balance from "@/components/Balance";
 import IncomeExpense from "@/components/IncomeExpense";
 import TransactionList from "@/components/TransactionList";
+import Welcome from "@/components/Welcome";
+// import { useEffect } from "react";
 
 const HomePage = async () => {
   const user = await currentUser();
@@ -12,18 +16,17 @@ const HomePage = async () => {
     return <Guest />;
   }
 
+  // window on load
+  // window.onload = function () {
+  //   useEffect(() => {
+  //     setTimeout(() => {
+  //       return <Welcome name={user.firstName ?? "deji"} />;
+  //     });
+  //   }, []);
+  // };
+
   return (
     <main className="w-full">
-      <h2 className="py-6 text-xl">
-        Welcome,{" "}
-        <span className="text-2xl font-extrabold font-sans">
-          {" "}
-          {user.firstName}
-        </span>
-        , to Spend Sensei
-      </h2>
-
-      <p className="text-lg font-semibold mb-8">Master your money moves!</p>
       <div className="grid md:flex md:justify-between">
         <div className="w-full md:w-2/3 md:pr-[70px]">
           <AddTransaction />

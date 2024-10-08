@@ -29,7 +29,9 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
         transaction.amount < 0 ? "minus" : "plus"
       }`}
     >
-      <span className="w-2/6">{transaction.text}</span>
+      <span className="w-2/6 h-[77px] md:h-[70px] overflow-hidden custom-gradient relative">
+        {transaction.text}
+      </span>
       <span className="w-1/6 item-amount">
         {sign} Ksh {addCommas(Math.abs(transaction.amount))}
       </span>

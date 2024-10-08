@@ -263,3 +263,37 @@ input[type="number"] {
 *::-webkit-scrollbar-thumb:hover {
   background: #9e7959;
 }
+
+.overflow-gradient {
+  position: relative; /* Required for absolute positioning of the gradient */
+  overflow: hidden; /* Ensure that the overflow is hidden */
+}
+
+.overflow-gradient::after {
+  content: ""; /* Create a pseudo-element for the gradient */
+  position: absolute; /* Position it relative to the span */
+  bottom: 0; /* Align it to the bottom */
+  left: 0;
+  right: 0;
+  height: 30px; /* Height of the gradient overlay */
+  background: linear-gradient(
+    to top,
+    rgba(128, 128, 128, 1) 0%,
+    rgba(128, 128, 128, 0) 100%
+  ); /* Gray gradient */
+  pointer-events: none; /* Allow clicks to go through */
+}
+
+.shadow {
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* .custom-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgba(0, 255, 0, 0) 30%,
+    rgba(0, 0, 255, 0) 85%,
+    rgba(80, 87, 96, 0.3) 100% 0%
+  );
+} */

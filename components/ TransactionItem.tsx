@@ -29,7 +29,7 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
         transaction.amount < 0 ? "minus" : "plus"
       }`}
     >
-      <span className="w-2/6 h-[77px] md:h-[70px] overflow-hidden custom-gradient relative">
+      <span className="w-2/6 h-[77px] md:h-[70px] overflow-hidden hover:h-full hover:overflow-x-hidden hover:overflow-auto custom-gradient relative ">
         {transaction.text}
       </span>
       <span className="w-1/6 item-amount">

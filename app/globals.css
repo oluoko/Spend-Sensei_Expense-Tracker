@@ -58,6 +58,7 @@ body {
 .guest button {
   width: 70%;
   height: 60px;
+  margin-top: 20px;
   font-size: larger;
 }
 

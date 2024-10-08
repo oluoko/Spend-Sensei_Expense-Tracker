@@ -25,7 +25,7 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
 
   return (
     <li
-      className={`flex justify-between gap-4 md:gap-10 w-full ${
+      className={`flex justify-between gap-4 rounded-2xl p-3 md:p-6 my-3 md:my-5 md:gap-10 w-full ${
         transaction.amount < 0 ? "minus" : "plus"
       }`}
     >

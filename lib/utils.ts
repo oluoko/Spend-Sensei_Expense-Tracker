@@ -2,7 +2,7 @@ export function addCommas(x: number): string {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-export function formatDate(date: Date) {
+export function formatDate(date: Date, format: "date" | "time") {
   const dayOfWeek = date.toLocaleString("en-US", { weekday: "long" });
   const day = date.getDate();
   const month = date.toLocaleString("en-US", { month: "long" });
@@ -24,12 +24,21 @@ export function formatDate(date: Date) {
 
   const dayWithSuffix = `${day}${getOrdinalSuffix(day)}`;
 
-  // Add time in 24-hour format
+  // Format time in 12-hour format with AM/PM
   const time = date.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: false, // 24-hour format
+    hour12: true, // 12-hour format with AM/PM
   });
 
+  if (format === "date") {
+    // Return the formatted date
+    return `${dayOfWeek}, ${dayWithSuffix} ${month}, ${year}`;
+  } else if (format === "time") {
+    // Return the formatted time
+    return `${time}`;
+  }
+
+  // Default to returning the full date if format is not specified
   return `${dayOfWeek}, ${dayWithSuffix} ${month}, ${year} at ${time}`;
 }

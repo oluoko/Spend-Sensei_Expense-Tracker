@@ -29,14 +29,17 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
         transaction.amount < 0 ? "minus" : "plus"
       }`}
     >
-      <span className="w-1/2">{transaction.text}</span>
-      <span className="w-1/4 item-amount">
+      <span className="w-2/6">{transaction.text}</span>
+      <span className="w-1/6 item-amount">
         {sign} Ksh {addCommas(Math.abs(transaction.amount))}
       </span>
-      <span className="w-1/4">
-        <span>{formatDate(new Date(transaction.createdAt))}</span>
+      <span className="w-2/6">
+        <span>{formatDate(new Date(transaction.createdAt), "date")}</span>
       </span>
 
+      <span className="w-1/6">
+        <span>{formatDate(new Date(transaction.createdAt), "time")}</span>
+      </span>
       <button
         onClick={() => handleDeleteTransaction(transaction.id)}
         className="delete-btn"

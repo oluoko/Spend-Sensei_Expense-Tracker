@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #d9d0cc;
+  background-color: #f2e3dc;
   min-height: 100vh;
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -44,6 +44,23 @@ body {
   cursor: pointer;
 }
 
+.navbar .user-button button:hover,
+.navbar .sign-in-button button:hover,
+.guest button:hover {
+  background: #505760;
+}
+
+.navbar .sign-in-button button {
+  height: 40px;
+  font-size: larger;
+}
+
+.guest button {
+  width: 70%;
+  height: 60px;
+  font-size: larger;
+}
+
 .navbar .user-button button {
   height: 50px;
   width: 50px;
@@ -51,6 +68,10 @@ body {
   margin: 0;
   padding: 0;
   margin-top: 7px;
+}
+
+.navbar .sign-in-button button {
+  width: 100%;
 }
 
 .navbar .user-button button span {

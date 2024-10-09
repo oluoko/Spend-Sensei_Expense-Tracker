@@ -29,7 +29,7 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
         transaction.amount < 0 ? "minus" : "plus"
       }`}
     >
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 bg-slate-300 md:bg-transparent rounded-lg">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-10 bg-slate-300 md:bg-transparent rounded-lg">
         <span className=" h-[77px] md:h-[70px] overflow-hidden hover:h-full hover:overflow-x-hidden hover:overflow-auto custom-gradient relative grid md:flex flex-col justify-center items-center p-2 md:p-0 bg-[#fff] md:bg-transparent">
           {transaction.text}
         </span>

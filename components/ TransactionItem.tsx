@@ -29,18 +29,18 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
         transaction.amount < 0 ? "minus" : "plus"
       }`}
     >
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 ">
-        <span className=" h-[77px] md:h-[70px] overflow-hidden hover:h-full hover:overflow-x-hidden hover:overflow-auto custom-gradient relative ">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 bg-slate-300 md:bg-transparent">
+        <span className=" h-[77px] md:h-[70px] overflow-hidden hover:h-full hover:overflow-x-hidden hover:overflow-auto custom-gradient relative rounded-lg bg-slate-100 md:bg-transparent">
           {transaction.text}
         </span>
-        <span className="item-amount">
+        <span className="item-amount rounded-lg bg-slate-100 md:bg-transparent">
           {sign} Ksh {addCommas(Math.abs(transaction.amount))}
         </span>
-        <span className="">
+        <span className="rounded-lg bg-slate-100 md:bg-transparent">
           <span>{formatDate(new Date(transaction.createdAt), "date")}</span>
         </span>
 
-        <span className="">
+        <span className="rounded-lg bg-slate-100 md:bg-transparent">
           <span>{formatDate(new Date(transaction.createdAt), "time")}</span>
         </span>
       </div>

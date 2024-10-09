@@ -9,8 +9,7 @@ const Welcome = ({ name }: WelcomeProps) => {
     
         <span className="text-4xl md:text-6xl font-extrabold font-sans">
           {name ? name : "Deshi"}, 
-        </span>{" "}
- welcome to Spend Sensei!
+        </span>{" "}welcome to Spend Sensei!
       </h1>
       <p className="text-2xl md:text-4xl">
         Take charge of your finances like a master.

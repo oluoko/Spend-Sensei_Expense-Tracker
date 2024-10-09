@@ -30,17 +30,17 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
       }`}
     >
       <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 bg-slate-300 md:bg-transparent rounded-lg">
-        <span className=" h-[77px] md:h-[70px] overflow-hidden hover:h-full hover:overflow-x-hidden hover:overflow-auto custom-gradient relative rounded-lg bg-slate-100 md:bg-transparent">
+        <span className=" h-[77px] md:h-[70px] overflow-hidden hover:h-full hover:overflow-x-hidden hover:overflow-auto custom-gradient relative grid md:flex flex-col justify-center items-center p-2 md:p-0 bg-[#fff] md:bg-transparent">
           {transaction.text}
         </span>
-        <span className="item-amount rounded-lg bg-slate-100 md:bg-transparent">
+        <span className="item-amount grid md:flex flex-col justify-center items-center p-2 md:p-0 bg-[#fff] md:bg-transparent">
           {sign} Ksh {addCommas(Math.abs(transaction.amount))}
         </span>
-        <span className="rounded-lg bg-slate-100 md:bg-transparent">
+        <span className="grid md:flex flex-col justify-center items-center p-2 md:p-0 bg-[#fff] md:bg-transparent">
           <span>{formatDate(new Date(transaction.createdAt), "date")}</span>
         </span>
 
-        <span className="rounded-lg bg-slate-100 md:bg-transparent">
+        <span className="grid md:flex flex-col justify-center items-center p-2 md:p-0 bg-[#fff] md:bg-transparent">
           <span>{formatDate(new Date(transaction.createdAt), "time")}</span>
         </span>
       </div>

@@ -16,7 +16,9 @@ const TransactionList = () => {
       if (error) {
         setError(error);
       } else {
-        setTransactions(transactions);
+        if (transactions) {
+          setTransactions(transactions);
+        }
       }
     };
 

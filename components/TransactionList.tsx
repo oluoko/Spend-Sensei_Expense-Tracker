@@ -75,7 +75,7 @@ const TransactionList = () => {
         ))}
       </ul>
 
-      <div className="navigation-buttons flex justify-between">
+      <div className="navigation-buttons flex justify-between mb-4">
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}

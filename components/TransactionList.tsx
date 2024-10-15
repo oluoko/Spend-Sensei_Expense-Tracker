@@ -52,8 +52,8 @@ const TransactionList = () => {
   return (
     <>
       <div className="flex justify-between">
-        <h3>History</h3>
-        <p>No. of Transactions: {transactions.length}</p>
+        <div className="w-1/3">History</div>
+        <div className="w-2/3">No. of Transactions: {transactions.length}</div>
       </div>
 
       <div className="pagination-controls flex justify-between w-full md:w-1/2">

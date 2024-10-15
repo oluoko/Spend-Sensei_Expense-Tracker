@@ -11,6 +11,7 @@ const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Spend Sensei",
   description: "Track your expenses and create a budget",
+  icons: { icon: "/Logo W.png" },
 };
 
 export default function RootLayout({

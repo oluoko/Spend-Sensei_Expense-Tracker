@@ -51,7 +51,7 @@ const TransactionList = () => {
 
   return (
     <>
-      <div className="flex justify-between mb-2 border-b border-slate-700/35">
+      <div className="flex justify-between mb-2 py-2 text-lg md:text-xl border-b border-slate-700/35">
         <div className="w-1/3">History</div>
         <div className="w-2/3">No. of Transactions: {transactions.length}</div>
       </div>

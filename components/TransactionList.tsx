@@ -53,7 +53,7 @@ const TransactionList = () => {
     <>
       <h3>History</h3>
 
-      <div className="pagination-controls flex justify-between w-1/2">
+      <div className="pagination-controls flex justify-between w-full md:w-1/2">
         <label htmlFor="pageSize">Transactions per page:</label>
         <select
           id="pageSize"
